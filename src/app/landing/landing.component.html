@@ -1,0 +1,23 @@
+<div class="container">
+    <header>
+      <h1>PoC Autenticación con Auth0</h1>
+      <p>Autenticación segura, simple y escalable</p>
+    </header>
+  
+    <main>
+      <div class="login-button-container">
+        <button (click)="auth.loginWithRedirect()" class="login-button">
+          Iniciar sesión con Auth0
+          <span class="arrow-right">→</span>
+        </button>
+      </div>
+  
+      <div class="features">
+        <div class="feature-card" *ngFor="let feature of features">
+         <mat-icon [fontIcon]="feature.iconClass"></mat-icon>
+          <h2>{{ feature.title }}</h2>
+          <p>{{ feature.description }}</p>
+        </div>
+      </div>
+    </main>
+  </div>
